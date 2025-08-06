@@ -1,0 +1,23 @@
+# Azure DevOps Tool Configuration
+
+azure_devops:
+  api_version: "7.0"
+  timeout: 30
+  max_retries: 3
+  
+  # Work Item Queries
+  queries:
+    my_tasks: "SELECT [System.Id] FROM WorkItems WHERE [System.AssignedTo] = @me AND [System.State] != 'Closed' ORDER BY [System.ChangedDate] DESC"
+    my_prs: "SELECT [System.Id] FROM WorkItems WHERE [System.AssignedTo] = @me AND [System.WorkItemType] = 'Pull Request' ORDER BY [System.CreatedDate] DESC"
+    sprint_tasks: "SELECT [System.Id] FROM WorkItems WHERE [System.AssignedTo] = @me AND [System.IterationPath] = @currentSprint"
+  
+  # API Endpoints
+  endpoints:
+    work_items: "https://dev.azure.com/{org}/{project}/_apis/wit/workitems"
+    pull_requests: "https://dev.azure.com/{org}/{project}/_apis/git/pullrequests"
+    repositories: "https://dev.azure.com/{org}/{project}/_apis/git/repositories"
+    
+  # Rate Limiting
+  rate_limits:
+    requests_per_minute: 60
+    burst_limit: 10 

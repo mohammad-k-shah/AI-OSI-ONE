@@ -1,0 +1,34 @@
+# Microsoft Teams Tool Configuration
+
+teams:
+  # Graph API Settings
+  graph_api:
+    version: "v1.0"
+    timeout: 30
+    max_retries: 3
+    
+  # Calendar Settings
+  calendar:
+    default_timezone: "UTC"
+    max_events: 100
+    include_attendees: true
+    include_body: false
+    
+  # API Endpoints
+  endpoints:
+    calendar: "https://graph.microsoft.com/v1.0/me/calendarView"
+    events: "https://graph.microsoft.com/v1.0/me/events"
+    messages: "https://graph.microsoft.com/v1.0/me/messages"
+    
+  # Rate Limiting
+  rate_limits:
+    requests_per_minute: 60
+    burst_limit: 10
+    
+  # OAuth Settings
+  oauth:
+    scopes:
+      - "Calendars.Read"
+      - "Mail.Read"
+      - "User.Read"
+    redirect_uri: "http://localhost:8080/auth/callback" 

@@ -1,0 +1,28 @@
+# OSI ONE AGENT - Development Dependencies
+
+# Testing
+pytest>=7.0.0             # Testing framework
+pytest-asyncio>=0.21.0    # Async testing support
+pytest-cov>=4.0.0         # Coverage reporting
+pytest-mock>=3.10.0       # Mocking support
+httpx>=0.24.0             # HTTP testing
+
+# Code Quality
+black>=23.0.0             # Code formatting
+isort>=5.12.0             # Import sorting
+flake8>=6.0.0             # Linting
+mypy>=1.0.0               # Type checking
+pre-commit>=3.0.0         # Git hooks
+
+# Documentation
+sphinx>=7.0.0             # Documentation generator
+sphinx-rtd-theme>=1.2.0   # Read the Docs theme
+
+# Development Tools
+ipython>=8.0.0            # Interactive Python
+jupyter>=1.0.0            # Jupyter notebooks
+debugpy>=1.6.0            # Debugging support
+
+# Monitoring and Profiling
+memory-profiler>=0.60.0   # Memory profiling
+psutil>=5.9.0             # System monitoring 

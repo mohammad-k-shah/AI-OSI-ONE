@@ -1,0 +1,35 @@
+# OSI One Tool Configuration
+
+osi_one:
+  # Browser Automation Settings
+  browser:
+    headless: true
+    timeout: 30
+    implicit_wait: 10
+    page_load_timeout: 30
+    
+  # Portal Configuration
+  portal:
+    base_url: "https://osi-one.portal.com"
+    login_url: "/login"
+    timesheet_url: "/timesheet"
+    
+  # Selectors (CSS/XPath)
+  selectors:
+    login:
+      username_field: "#username"
+      password_field: "#password"
+      login_button: "#login-btn"
+      
+    timesheet:
+      date_field: "#date"
+      project_field: "#project"
+      hours_field: "#hours"
+      description_field: "#description"
+      submit_button: "#submit-btn"
+      
+  # Error Recovery
+  error_recovery:
+    max_retries: 3
+    retry_delay: 2
+    selector_fallbacks: true 
