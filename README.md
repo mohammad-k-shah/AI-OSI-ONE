@@ -52,10 +52,48 @@
 
 ### 🎨 User Interface
 
-- **Terminal UI:** Rich, interactive command-line interface
-- **Progress Indicators:** Real-time feedback for long operations
-- **Error Handling:** Clear, helpful error messages
-- **Auto-completion:** Smart suggestions for commands
+### **Desktop Application (OSI Work Buddy)**
+
+The OSI Work Buddy features a modern, professional desktop interface built with PyQt5:
+
+#### **Design Features:**
+- **Modern Layout**: Clean three-section design with rounded corners
+- **Professional Colors**: Dark blue header, white chat area, light gray input
+- **Responsive Design**: Adapts to different screen sizes (350-500px width)
+- **System Integration**: System tray, notifications, always-on-top option
+
+#### **UI Components:**
+
+**Header Section:**
+- Brain emoji avatar (🧠) with circular background
+- "Chat with OSI Work Buddy" title
+- "AI Assistant Online" status indicator
+- Settings (⋮) and minimize (⌄) buttons
+
+**Chat Area:**
+- Message bubbles with distinct styling for user vs bot messages
+- Quick reply buttons for common actions
+- Smooth scrolling with minimal scrollbar
+- Timestamp display for all messages
+
+**Input Area:**
+- Emoji picker button (😊)
+- File attachment button (📎)
+- Rounded text input field with placeholder
+- Circular send button (➤)
+
+#### **Interactive Features:**
+- **Keyboard Shortcuts**: Enter to send, Shift+Enter for new line
+- **Context Menus**: Right-click message actions (copy, etc.)
+- **Voice Input**: Speech-to-text capability
+- **Quick Replies**: One-click common actions
+- **System Tray**: Minimize to background operation
+
+#### **Visual Design:**
+- **Color Scheme**: Professional blue theme with accessibility support
+- **Typography**: Segoe UI font family with responsive sizing
+- **Animations**: Smooth hover effects and transitions
+- **Icons**: Modern emoji-based interface elements
 
 ### 🔧 Technical Features
 

@@ -9,6 +9,10 @@ cryptography>=41.0.0      # Encryption
 rich>=13.0.0              # Terminal UI
 python-dotenv>=1.0.0      # Environment management
 
+# Desktop UI
+PyQt5>=5.15.0            # Desktop GUI framework
+SpeechRecognition>=3.10.0 # Voice input support
+
 # Browser Automation (MVP)
 selenium>=4.15.0         # Web automation for MVP
 webdriver-manager>=4.0.0  # Automatic driver management

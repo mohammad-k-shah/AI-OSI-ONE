@@ -536,3 +536,75 @@ The architecture is designed to be:
 - **IT-Compliant:** Selenium-based automation for MVP phase
 
 This document serves as the technical blueprint for the OSI ONE AGENT development team and should be updated as the project evolves. 
+
+## 🎨 UI Layer Architecture
+
+### **Desktop GUI (PyQt5)**
+
+The desktop application provides a modern, professional interface with the following components:
+
+#### **Main Window (OSIAgentGUI)**
+- **Framework**: PyQt5 with QSS styling
+- **Design**: Modern frameless window with rounded corners
+- **Layout**: Three-section design (header, chat, input)
+- **Features**: System tray integration, notifications, voice input
+
+#### **UI Components:**
+
+**Header Section:**
+- **Background**: Dark blue (`#1E3A8A`)
+- **Avatar**: Brain emoji (🧠) with circular background
+- **Title**: "Chat with OSI Work Buddy"
+- **Status**: "AI Assistant Online"
+- **Controls**: Settings (⋮) and minimize (⌄) buttons
+
+**Chat Area:**
+- **Background**: White (`#FFFFFF`)
+- **Message Bubbles**: 
+  - Bot messages: Light gray (`#F1F5F9`)
+  - User messages: Blue (`#3B82F6`)
+- **Quick Reply Buttons**: Pill-shaped, blue/transparent variants
+- **Scrollbar**: Minimal, light gray design
+
+**Input Area:**
+- **Background**: Light gray (`#F3F4F6`)
+- **Components**: Emoji button (😊), attachment button (📎), text input, send button (➤)
+- **Input Field**: Rounded white background with blue focus border
+
+#### **Key Features:**
+- **Responsive Design**: 400x600px default, 350-500px width range
+- **Always on Top**: Optional window behavior
+- **System Tray**: Minimize to tray functionality
+- **Keyboard Shortcuts**: Enter to send, Shift+Enter for new line
+- **Context Menus**: Right-click message actions
+- **Voice Input**: Speech-to-text integration
+
+#### **Styling System:**
+- **QSS (Qt Style Sheets)**: Centralized styling in `styles.py`
+- **Color Palette**: Professional blue theme with accessibility considerations
+- **Typography**: Segoe UI font family with responsive sizing
+- **Animations**: Smooth transitions and hover effects
+
+#### **Component Architecture:**
+```
+OSIAgentGUI (Main Window)
+├── Header Frame
+│   ├── Avatar Label
+│   ├── Name/Status Labels
+│   └── Control Buttons
+├── Chat Widget
+│   ├── Scroll Area
+│   ├── Message Bubbles
+│   └── Quick Reply Buttons
+└── Input Widget
+    ├── Emoji Button
+    ├── Attachment Button
+    ├── Message Input
+    └── Send Button
+```
+
+#### **Worker Thread Integration:**
+- **AgentWorker**: Handles async agent operations
+- **Signal/Slot Pattern**: Thread-safe UI updates
+- **Processing States**: Visual feedback during operations
+- **Error Handling**: User-friendly error messages 
